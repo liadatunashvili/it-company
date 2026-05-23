@@ -6,12 +6,15 @@ public class Task {
     private Long id;
     private String title;
     private LocalDateTime deadline;
+    private boolean completed;
     private Employee employee;
 
-    public Task(Long id, String title, LocalDateTime deadline, Employee employee) {
+    public Task(Long id, String title, LocalDateTime deadline,
+                boolean completed, Employee employee) {
         this.id = id;
         this.title = title;
         this.deadline = deadline;
+        this.completed = completed;
         this.employee = employee;
     }
 
@@ -37,6 +40,14 @@ public class Task {
 
     public void setDeadline(LocalDateTime deadline) {
         this.deadline = deadline;
+    }
+
+    public boolean isCompleted() {
+        return completed;
+    }
+
+    public void setCompleted(boolean completed) {
+        this.completed = completed;
     }
 
     public Employee getEmployee() {

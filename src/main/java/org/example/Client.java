@@ -4,13 +4,13 @@ public class Client {
     private Long id;
     private String name;
     private String email;
-    private ItCompany itCompany;
+    private String phone;
 
-    public Client(Long id, String name, String email, ItCompany itCompany) {
+    public Client(Long id, String name, String email, String phone) {
         this.id = id;
         this.name = name;
         this.email = email;
-        this.itCompany = itCompany;
+        this.phone = phone;
     }
 
     public Long getId() {
@@ -37,11 +37,11 @@ public class Client {
         this.email = email;
     }
 
-    public ItCompany getItCompany() {
-        return itCompany;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setItCompany(ItCompany itCompany) {
-        this.itCompany = itCompany;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }

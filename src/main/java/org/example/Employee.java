@@ -1,5 +1,6 @@
 package org.example;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Employee {
@@ -8,11 +9,11 @@ public class Employee {
     private String lastName;
     private double salary;
     private boolean active;
-    private LocalDateTime birthDate;
+    private LocalDate birthDate;
     private LocalDateTime hireTime;
-    private Department department;
 
-    public Employee(Long id, String name, String lastName, double salary, boolean active, LocalDateTime birthDate, LocalDateTime hireTime, Department department) {
+    public Employee(Long id, String name, String lastName, double salary,
+                    boolean active, LocalDate birthDate, LocalDateTime hireTime) {
         this.id = id;
         this.name = name;
         this.lastName = lastName;
@@ -20,7 +21,6 @@ public class Employee {
         this.active = active;
         this.birthDate = birthDate;
         this.hireTime = hireTime;
-        this.department = department;
     }
 
     public Long getId() {
@@ -63,11 +63,11 @@ public class Employee {
         this.active = active;
     }
 
-    public LocalDateTime getBirthDate() {
+    public LocalDate getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(LocalDateTime birthDate) {
+    public void setBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
     }
 
@@ -77,13 +77,5 @@ public class Employee {
 
     public void setHireTime(LocalDateTime hireTime) {
         this.hireTime = hireTime;
-    }
-
-    public Department getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(Department department) {
-        this.department = department;
     }
 }

@@ -1,18 +1,14 @@
 package org.example;
 
-import java.util.List;
-
-public class technology {
+public class Technology {
     private Long id;
     private String name;
     private String version;
-    private Project project;
 
-    public technology(Long id, String name, String version, Project project) {
+    public Technology(Long id, String name, String version) {
         this.id = id;
         this.name = name;
         this.version = version;
-        this.project = project;
     }
 
     public Long getId() {
@@ -37,13 +33,5 @@ public class technology {
 
     public void setVersion(String version) {
         this.version = version;
-    }
-
-    public Project getProject() {
-        return project;
-    }
-
-    public void setProject(Project project) {
-        this.project = project;
     }
 }

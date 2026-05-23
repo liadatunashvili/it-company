@@ -1,16 +1,18 @@
 package org.example;
 
+import java.util.List;
+
 public class Department {
     private Long id;
     private String name;
     private double budget;
-    private ItCompany company;
+    private List<Employee> employees;
 
-    public Department(Long id, String name, double budget, ItCompany company) {
+    public Department(Long id, String name, double budget, List<Employee> employees) {
         this.id = id;
         this.name = name;
         this.budget = budget;
-        this.company = company;
+        this.employees = employees;
     }
 
     public Long getId() {
@@ -37,11 +39,11 @@ public class Department {
         this.budget = budget;
     }
 
-    public ItCompany getCompany() {
-        return company;
+    public List<Employee> getEmployees() {
+        return employees;
     }
 
-    public void setCompany(ItCompany company) {
-        this.company = company;
+    public void setEmployees(List<Employee> employees) {
+        this.employees = employees;
     }
 }

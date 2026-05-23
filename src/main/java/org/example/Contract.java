@@ -1,20 +1,21 @@
 package org.example;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 public class Contract {
     private Long id;
     private String contractDetails;
-    private LocalDateTime contractStartDate;
-    private LocalDateTime contractFinishDate;
-    private Client client;
+    private LocalDate contractStartDate;
+    private LocalDate contractFinishDate;
+    private double value;
 
-    public Contract(Long id, String contractDetails, LocalDateTime contractStartDate, LocalDateTime contractFinishDate, Client client) {
+    public Contract(Long id, String contractDetails, LocalDate contractStartDate,
+                    LocalDate contractFinishDate, double value) {
         this.id = id;
         this.contractDetails = contractDetails;
         this.contractStartDate = contractStartDate;
         this.contractFinishDate = contractFinishDate;
-        this.client = client;
+        this.value = value;
     }
 
     public Long getId() {
@@ -33,27 +34,27 @@ public class Contract {
         this.contractDetails = contractDetails;
     }
 
-    public LocalDateTime getContractStartDate() {
+    public LocalDate getContractStartDate() {
         return contractStartDate;
     }
 
-    public void setContractStartDate(LocalDateTime contractStartDate) {
+    public void setContractStartDate(LocalDate contractStartDate) {
         this.contractStartDate = contractStartDate;
     }
 
-    public LocalDateTime getContractFinishDate() {
+    public LocalDate getContractFinishDate() {
         return contractFinishDate;
     }
 
-    public void setContractFinishDate(LocalDateTime contractFinishDate) {
+    public void setContractFinishDate(LocalDate contractFinishDate) {
         this.contractFinishDate = contractFinishDate;
     }
 
-    public Client getClient() {
-        return client;
+    public double getValue() {
+        return value;
     }
 
-    public void setClient(Client client) {
-        this.client = client;
+    public void setValue(double value) {
+        this.value = value;
     }
 }
